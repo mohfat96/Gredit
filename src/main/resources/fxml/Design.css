@@ -1,0 +1,16 @@
+.split-pane:horizontal > .split-pane-divider {
+    -fx-padding: 1 0 0 1;
+}
+
+.split-pane:vertical > .split-pane-divider {
+    -fx-padding: 1 0 0 1;
+}
+
+.tooltip {
+    -fx-font-size: 12px;
+}
+
+#focused {
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 1 , 0 );
+}
+

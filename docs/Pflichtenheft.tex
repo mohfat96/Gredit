@@ -1,0 +1,214 @@
+\documentclass[10pt, paper = a4, oneside,final]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=20mm,top=26mm,right=20mm,bottom=26mm]{geometry}
+
+%Für mathematische Formeln
+\usepackage{amsmath,amssymb,amsthm,pifont}
+\usepackage{amsfonts}
+\usepackage[inline]{enumitem}
+\usepackage{ulem}
+\usepackage{fancyhdr, graphicx}
+\usepackage{algorithmicx, algpseudocode}
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{xspace}
+
+\usetikzlibrary{shapes}
+
+%User defined commands
+\newcommand\tab[1][1cm]{\h
+	space*{#1}}    
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand\abs[1]{\left|#1\right|} 
+
+%Dokumentweite Eigenschaften
+% \setcounter{page} {60}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{0pt} 
+\lhead{PFLICHTENHEFT GREDIT}
+\cfoot{-\thepage -}
+%\rfoot{}
+
+
+%Titelseite
+\title{\Huge Pflichtenheft Gredit}
+\date{\Large\today}
+\author{Alexander Adrio \and
+		Mohammad Alkhufash \and
+		Simon Raffeck}
+\begin{document}
+
+\maketitle
+%\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Zielbestimmungen}
+\subsection{Musskriterien}
+\begin{enumerate}[label=$\circ$]
+	\item Der Nutzer \begin{enumerate}[label=$\circ$]
+		\item Der Nutzer kann die oben genannten Notenlinien und Punkte nach belieben verschieben.
+		\item Der Benutzer kann mithilfe von Maus oder Tastatur aufeinander folgende Noten markieren und diese nach belieben nach oben oder unten verschieben.
+		\item Es können bis zu vier Notenlinien vom Benutzer hinzugefügt werden, falls welche fehlen.
+		\item Der Benutzer kann die bis zu vier Notenlinien sowie den Notenschlüssel beliebig bewegen.
+		\item Der Benutzer kann bis zu 10 Tabs offen halten mit den eingelesenen Bild- und Textdateien, in denen er mit den jeweiligen Daten arbeiten kann.
+		\item Der Benutzer kann die relative Größe von Toolbar und Terminal ändern.
+		
+		\item Der Benutzer kann seine Arbeit wieder in das Ursprungsformat speichern.
+	\end{enumerate} 
+	\item Das Programm \begin{enumerate}[label=$\circ$]
+	\item Einlesen von Bild- und Textdatein, die das Ergebnis von Gruppe 8 sind.
+	\item Anzeigen der Bilddateien, auf denen Notenlinien und Punkte, die Tonhöhen repräsentieren, zu sehen sind.
+	\item Sobald eine Entität (Notenzeile, Ton, Schlüssel) angeklickt wird, wird sie hervorgehoben.
+	\item Das Programm kann sowohl mit Tastatur als auch mit der Maus bedient werden.
+	\end{enumerate}
+	\item Sonstiges \begin{enumerate}[label=$\circ$]
+	\item Das Programm ist in englischer Sprache verfügbar
+	\end{enumerate}
+	
+\end{enumerate}
+
+\subsection{Kannkriterien}
+\begin{enumerate}[label=$\circ$]
+	\item Die Zeile, die gerade vom Benutzer bearbeitet wird, wird von den anderen Notenzeilen abgehoben.
+	\item Es kann die Tonart des gesamten Stückes analysiert werden.
+	\item Es soll eine Undo-Historie angelegt werden, so dass die letzen 20 Befehlen rückgängig gemacht werden können.
+	\item Das Programm transponiert alle Noten, sobald der Notenschlüssel verschoben wird.
+	\item Es kann die Farbe der Notenlinien und der Noten individuell ausgewählt werden.
+	\item Noten sollen nach dem gegebenen Notenschlüssel auffindbar sein.
+	\item Nach dem Neustart des Programms soll das zuletzt bearbeitete Projekt wieder geöffnet werden.
+	\item Der Benutzer kann das Ergebnis seiner Arbeit in Form einer MusicXML-Datei exportieren.
+\end{enumerate}
+
+\subsection{Abgrenzungskriterien}
+\begin{enumerate}[label=$\circ$]
+	\item Das Programm ist kein Kompositionseditor. Falls die eingelesenen Daten unvollständig oder leer sind, werden sie abgelehnt.
+	\item Es wird keine akustische Wiedergabe geben.
+	\item Der Benutzer muss alle Änderungen manuell durchführen. Es existiert keine automatisch Nachbearbeitung.
+\end{enumerate}
+
+
+\section{Produkteinsatz}
+\subsection{Anwendungsbereiche}
+Einzelpersonen verwenden dieses Programm, um manuell Noten bzw. Notenzeilen hinzuzufügen und mögliche Fehler zu korrigieren, die durch den Image Recognition Prozess aufgetreten sind.
+
+\subsection{Zielgruppen}
+Die Zielgruppe besteht aus Personen, die aus gegebenen Gründen das Image Recognition Tool von Gruppe 8 verwenden und nun sichergehen wollen, dass das Ergebnis korrekt ist, indem sie mögliche Fehler manuell korrigieren. \\
+Die Zielgruppe kann aus Mitarbeitern von Universitäten, Bibliotheken oder Museen bestehen.\\
+Es werden keine besonderen Kenntnisse gefordert, außer ein rudimentäres Verständis der englischen Sprache.
+ 
+ \section{Produktumgebung}
+ \subsection{Software}
+ \begin{enumerate}[label=$\circ$]
+ 	\item Betriebssysteme: Windows 10, Ubuntu 16.04 LTS
+	\item Installiertes und ins System eingebundenes Java (Version 1.8)
+	\item Alle benötigten Pakete/Libraries, um ein JavaFX-Fenster korrekt darzustellen
+ \end{enumerate}
+
+\subsection{Hardware}
+\begin{enumerate}[label=$\circ$]
+	\item Ausreichend starker Prozessor und genügend viel RAM, um ein Java-Programm laufen lassen zu können.
+\end{enumerate}
+
+\section{Produktfunktionen}
+Das Produkt leistet folgendes:
+
+\begin{enumerate}[label=/F00\arabic*0/]
+	\item Datei importieren: Der Benutzer lädt mittels einer Dateiauswahl eine Datei, welche alle benötigten Daten enthält. Dabei sollten folgenden Daten vorhanden sein:
+		\begin{enumerate}[label=$\circ$]
+			\item Bilder der Notenzeilen, die vom Image-Recognition-Tool analysiert worden sind
+			\item Notenwerte, die vom oben genannten Tool erkannt wurden
+			\item X- und Y-Koordinaten von Noten, Zeilen und Schlüsseln
+		\end{enumerate}
+	Sofern kein Fehler beim Einlesen passiert, werden maximal drei Notenzeilen in jeweils einen Tab gepackt, in dem der Nutzer arbeiten kann.
+	\item Daten bearbeiten: Der Benutzer kann nun die eingelesenen Daten nach belieben ändern. Hierbei hat er folgende Möglichkeiten:
+	\begin{enumerate}[label=$\circ$]
+		\item Hinzufügen von maximal vier Notenlinien
+		\item Hinzufügen von Noten
+		\item Löschen von markierten Noten oder Notengruppen sowie von Notenzeilen
+		\item Verschieben von Noten, Notenzeilen und -schlüsseln
+	\end{enumerate}
+	\item Dateien speichern: Der Benutzer kann seine Änderungen in das Ursprungsformat wieder zurück schreiben und speichern.
+	\item Exportieren: Der Benutzer kann ein gegebenes Projekt in eine MusicXML Datei exportieren.
+\end{enumerate}
+
+\section{Produktleistungen}
+Es werden folgende zeit- und umfangsbezogene Anforderungen geben:
+\begin{enumerate}[label=/L\arabic*00/]
+	\item Toleranz: Bei fehlererzeugenden Eingaben muss der Benutzer die Möglichkeit haben, eine Korrektur der Eingabedaten vorzunehmen, ohne die Eingaben wiederholt eingeben zu müssen.
+\end{enumerate}
+\section{Benutzeroberfläche}
+Layout und Design des Programms wird überwiegend durch Komponenten aus der JavaFX Bibliothek realisiert. Im folgenden soll nachfolgende, exemplarische GUI genauer beschrieben werden. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{gui_example.png}
+	\caption[Bild 1]{Examplarische Benutzerschnittstelle von Gredit}
+	\label{fig:guiexample}
+\end{figure}
+
+
+\subsection{Menüstruktur}
+Die Menüpunkte im oberen Teil der GUI sollen wie folgt aufgebaut sein:
+\begin{enumerate}[label=$\circ$]
+	\item File
+	\begin{enumerate}[label=$\circ$]
+		\item Open project: Falls bereits ein Projekt geladen wurde, wird in einem Pop-Up-Fenster gefragt, ob der Benutzer das derzeitige Projekt verwerfen will. Falls nicht, werden mögliche Änderungen in die Ursprungsdatei gespeichert. Schließlich öffnet sich ein FileChoser Fenster und der Benutzer kann die gewünschte Datei öffnen.
+		\item Export: Sofern bereits ein Projekt geladen wurde, wird ein DirectoyChoser geöffnet mit dem der Benutzer den gewünschten Ort aussucht, an dem die zu MusicXML transkripierte Projektdatei gespeichert werden soll. \\
+		Andernfalls wird eine Fehlermeldung ausgegeben.
+		\item Save: Falls bereits ein Projekt geladen wurde, wird dieses gespeichert. 
+	\end{enumerate}
+	\item Edit: Hier werden nochmal die Werkzeuge, die auch auf der linken Seite der GUI zu sehen sind, aufgelistet und können dort angewählt werden.
+	\item Help
+	\begin{enumerate}[label=$\circ$]
+		\item Tutorial: Diese Option öffnet ein kleines Pop-Up Fenster, das kurz die verschiedenen Funktionen des Programs erklärt.
+		\item Shortcuts: Diese Option öffnet ein kleines Pop-Up Fenster, das eine Übersicht über die verschiedenen Tastaturkombinationen zeigt.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Toolbarstruktur}
+Im folgenden soll die Toolbar, die sich auf der linken Seite der GUI befindet, genauer beschrieben werden:
+\begin{enumerate}[label=$\circ$]
+	\item Node: Sobald dieser Button angewählt wird, befindet sich der Nutzer im Editiermodus für Noten. Es können nun einzelne Noten oder mehrere Noten gleichzeitig angewählt und anschließend mit den Optionen des Kontektmenüs editiert werden.
+	\item Line: Sobald der Nutzer diesen Button anklickt, befindet er sich im Editiermodus für Notenlinien. Nun können einzelne oder mehrere Notenzeilen markiert und mit den Optionen des Kontextmenüs editiert werden.
+	\item ColorChoser: Je nach Editiermodus können mit Hilfe des ColorChosers Notenzeilen bzw. Noten umgefärbt werden.
+\end{enumerate}
+
+\subsection{Tabstruktur}
+In einem Tab werden maximal drei, editierbare Notenzeilen untereinander angezeigt. Alle Notenwerte der einzelnen Zeilen sind im Textfeld "Transcription" beschrieben und können dort auch direkt vom Nutzer verändert werden.
+
+\subsection{Kontextmenüstruktur}
+Das Kontextmenü, das mit Rechtsklick aufgerufen werden kann, hat je nach Editiermodus verschiedene Funktionen. Alle aufgelisteten Aktionen können auch mit Shortcuts angewählt werden. Im folgenden sollen die verschiedenen Funktionen je nach Editiermodus aufgelistet werden:
+\begin{enumerate}[label=$\circ$]
+	\item Noten Editiermodus:
+	\begin{enumerate}[label=$\circ$]
+		\item Insert note (falls keine Note ausgewählt wurde)
+		\item Delete
+		\item Move (Verschieben nach oben bzw. unten mit den jeweiligen Pfeiltasten)
+		\item Colourize
+	\end{enumerate}
+	\item Zeilen Editiermodus:
+	\begin{enumerate}[label=$\circ$]
+		\item Insert line (falls keine Notenzeile ausgewählt wurde)
+		\item Delete
+		\item Move (Verschieben nach oben bzw. unten mit den jeweiligen Pfeiltasten)
+		\item Colourize
+	\end{enumerate}
+\end{enumerate}
+
+\section{Qualitätsbestimmungen}
+Auf folgende Qualitätsanforderungen an die Software wird besonders Wert gelegt:
+\begin{center}
+	\begin{tabular}{l||c|c|c|c}
+		~ & sehr wichtig & wichtig & weniger wichtig & unwichtig \\
+		\hline \hline
+		Robustheit & x& & & \\ \hline
+		Zuverläsigkeit & x& & & \\ \hline
+		Korrektheit & x& & & \\ \hline
+		Benutzerfreundlichkeit & & x& & \\ \hline
+		Effizienz & & x& & \\ \hline
+		Kompatibilität & & & x& 
+	\end{tabular}
+\end{center}
+\end{document}

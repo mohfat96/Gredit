@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.sample.Controller">
+   <children>
+       <SplitPane dividerPositions="0.08862876254180602" layoutX="186.0" layoutY="120.0" prefHeight="160.0" prefWidth="200.0" stylesheets="@Design.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+          <items>
+              <AnchorPane fx:id="sidePane" maxWidth="-Infinity" minHeight="0.0" minWidth="60.0" prefHeight="398.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
+                 <children>
+                     <VBox alignment="TOP_CENTER" layoutX="-25.0" layoutY="-68.0" prefHeight="369.0" prefWidth="50.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                         <padding>
+                             <Insets bottom="20.0" top="50.0" />
+                         </padding>
+                        <children>
+                            <ToggleButton fx:id="moveBtn" contentDisplay="CENTER" layoutX="10.0" layoutY="160.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" stylesheets="@Design.css">
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                                <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                       <image>
+                                           <Image url="@../assets/9-512.png" />
+                                       </image>
+                                    </ImageView>
+                                </graphic>
+                            </ToggleButton>
+                            <ToggleButton fx:id="lineBtn" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" text="—">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </ToggleButton>
+                            <ToggleButton fx:id="noteBtn" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" text="•">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </ToggleButton>
+                            <ToggleButton fx:id="noteKeyBtn" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" text="𝄞">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                                <contextMenu>
+                                    <ContextMenu fx:id="notekeyChooser">
+                                        <items>
+                                            <MenuItem fx:id="cKey" mnemonicParsing="false" text="C-Key" />
+                                            <MenuItem fx:id="fKey" mnemonicParsing="false" text="F-Key" />
+                                        </items>
+                                    </ContextMenu>
+                                </contextMenu>
+                            </ToggleButton>
+                            <Button fx:id="trashBtn" contentDisplay="CENTER" layoutX="10.0" layoutY="60.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" stylesheets="@Design.css">
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                                <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                       <image>
+                                           <Image url="@../assets/bin.png" />
+                                       </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <ColorPicker fx:id="colorPicker" maxWidth="1.7976931348623157E308">
+                                <value>
+                                    <Color blue="0.0" green="0.0" red="1.0" />
+                                </value>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </ColorPicker>
+                        </children>
+                     </VBox>
+                 </children>
+              </AnchorPane>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="142.0">
+                 <children>
+                     <SplitPane dividerPositions="0.8301886792452831" layoutX="129.0" layoutY="87.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                        <items>
+                            <AnchorPane minHeight="-Infinity" minWidth="0.0" prefHeight="60.0" prefWidth="415.0">
+                               <children>
+                                   <TabPane fx:id="tabPane" layoutX="101.0" layoutY="66.0" prefHeight="305.0" prefWidth="540.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                               </children>
+                            </AnchorPane>
+                            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                               <children>
+                                   <Label text="Transcription" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                   <TextField fx:id="transcription" alignment="TOP_LEFT" layoutY="32.0" prefHeight="25.0" prefWidth="525.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="32.0" />
+                                   <Button fx:id="refresh" layoutX="357.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" textAlignment="CENTER" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                       <image>
+                                          <Image url="@../assets/refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                               </children>
+                            </AnchorPane>
+                        </items>
+                     </SplitPane>
+                 </children>
+              </AnchorPane>
+          </items>
+       </SplitPane>
+       <MenuBar minWidth="-Infinity" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <padding>
+               <Insets top="2.0" />
+           </padding>
+          <menus>
+              <Menu mnemonicParsing="false" text="File">
+                 <items>
+                     <MenuItem fx:id="openMenu" mnemonicParsing="false" text="Open">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="O" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                     <MenuItem fx:id="saveAllMenu" mnemonicParsing="false" text="Save All">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                     <MenuItem fx:id="saveMenu" mnemonicParsing="false" text="Save">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                     <MenuItem fx:id="exportMenu" mnemonicParsing="false" text="Export">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                     <MenuItem fx:id="closeMenu" mnemonicParsing="false" text="Close Tab">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                     <MenuItem fx:id="closeAllMenu" mnemonicParsing="false" text="Close All">
+                         <accelerator>
+                             <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                         </accelerator>
+                     </MenuItem>
+                 </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edit">
+                 <items>
+                     <Menu mnemonicParsing="false" text="Insert">
+                        <items>
+                            <MenuItem fx:id="insertLineMenu" mnemonicParsing="false" text="Line" />
+                            <MenuItem fx:id="insertNoteMenu" mnemonicParsing="false" text="Note" />
+                            <MenuItem fx:id="insertKeyMenu" mnemonicParsing="false" text="Notekey" />
+                        </items>
+                     </Menu>
+                     <MenuItem fx:id="changeColorMenu" mnemonicParsing="false" text="Change Color" />
+                     <MenuItem fx:id="deleteMenu" mnemonicParsing="false" text="Delete" />
+                 </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Help">
+                 <items>
+                     <MenuItem fx:id="tutorialMenuItem" mnemonicParsing="false" text="Tutorial" />
+                     <MenuItem fx:id="shortcutsMenuItem" mnemonicParsing="false" text="Keyboard Shortcuts" />
+                 </items>
+              </Menu>
+          </menus>
+       </MenuBar>
+       <TextField fx:id="searchTextField" layoutX="440.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Search Notes" style="-fx-background-radius: 15px, 15px;" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.5">
+           <opaqueInsets>
+             <Insets />
+           </opaqueInsets>
+       </TextField>
+       <Label text="Multi Select:" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="7.5" />
+       <CheckBox fx:id="notesSelect" mnemonicParsing="false" text="Notes" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="7.5" />
+       <CheckBox fx:id="linesSelect" mnemonicParsing="false" text="Lines" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="7.5" />
+       <CheckBox fx:id="keysSelect" mnemonicParsing="false" text="Notekeys" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="7.5" />
+   </children>
+</AnchorPane>

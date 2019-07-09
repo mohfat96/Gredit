@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: swp.omr:optical-music-recognition:0.9.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/swp/omr/optical-music-recognition/0.9.0-SNAPSHOT/optical-music-recognition-0.9.0-20180703.124251-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/swp/omr/optical-music-recognition/0.9.0-SNAPSHOT/optical-music-recognition-0.9.0-20180703.124251-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/swp/omr/optical-music-recognition/0.9.0-SNAPSHOT/optical-music-recognition-0.9.0-20180703.124251-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

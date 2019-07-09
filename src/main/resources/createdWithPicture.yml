@@ -1,0 +1,106 @@
+checksum: 5.08655757765818E161
+staves:
+- keys:
+  - coordinate:
+      x: 31.0
+      y: 44.0
+  lines:
+  - end:
+      x: 952.0
+      y: 31.0
+    start:
+      x: 11.0
+      y: 30.0
+    width: 941.0
+  - end:
+      x: 952.0
+      y: 63.0
+    start:
+      x: 11.0
+      y: 63.0
+    width: 941.0
+  - end:
+      x: 952.0
+      y: 95.0
+    start:
+      x: 11.0
+      y: 96.0
+    width: 941.0
+  - end:
+      x: 11.0
+      y: 128.0
+    start:
+      x: 949.0
+      y: 128.0
+    width: -938.0
+  notes:
+  - coordinate:
+      x: 77.5
+      y: 4.5
+  - coordinate:
+      x: 381.5
+      y: 4.5
+  - coordinate:
+      x: 142.5
+      y: 10.5
+  - coordinate:
+      x: 454.5
+      y: 4.5
+  - coordinate:
+      x: 477.5
+      y: 16.5
+  - coordinate:
+      x: 527.5
+      y: 23.5
+  - coordinate:
+      x: 499.5
+      y: 32.5
+  - coordinate:
+      x: 236.5
+      y: 34.5
+  - coordinate:
+      x: 591.5
+      y: 37.5
+  - coordinate:
+      x: 892.5
+      y: 40.5
+  - coordinate:
+      x: 647.5
+      y: 39.5
+  - coordinate:
+      x: 672.5
+      y: 52.5
+  - coordinate:
+      x: 167.5
+      y: 64.5
+  - coordinate:
+      x: 692.5
+      y: 69.5
+  - coordinate:
+      x: 747.5
+      y: 70.5
+  - coordinate:
+      x: 763.5
+      y: 92.5
+  - coordinate:
+      x: 285.5
+      y: 134.5
+  - coordinate:
+      x: 577.5
+      y: 136.5
+  - coordinate:
+      x: 360.5
+      y: 16.5
+  - coordinate:
+      x: 62.5
+      y: 37.5
+  - coordinate:
+      x: 76.5
+      y: 58.5
+  - coordinate:
+      x: 873.5
+      y: 51.5
+  - coordinate:
+      x: 360.5
+      y: 18.5
+  path: /home/simon/SWP18SS_OMR-Postcorrection/src/gui/sample/recources/assets/test.yml.jpg
